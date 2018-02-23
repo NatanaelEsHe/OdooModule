@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="moviles_proveedores_action" name="proveedores"
+                     res_model="moviles.proveedores" />
+
+        <menuitem name="Proveedores" id="menu_proveedoress" action="moviles_proveedores_action" parent="menu_inicio" sequence="15"/>
+
+        <record id="moviles_proveedores_view_tree" model="ir.ui.view">
+            <field name="name">Lista de proveedores</field>
+            <field name="model">moviles.proveedores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="idProv" />
+                    <field name="nombProv" />
+                    <field name="tlfProv" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="moviles_proveedores_view_form" model="ir.ui.view">
+            <field name="name">Prueba formulario</field>
+            <field name="model">moviles.proveedores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="idProv" />
+                    <field name="nombProv" />
+                    <field name="tlfProv" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="moviles_proveedores_view_search" model="ir.ui.view">
+            <field name="name">Busqueda</field>
+            <field name="model">moviles.proveedores</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="idProv" />
+                    <field name="nombProv" />
+                    <field name="tlfProv" />
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

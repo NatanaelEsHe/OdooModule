@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="moviles_ventas_action" name="ventas"
+                     res_model="moviles.ventas" />
+
+        <menuitem name="Ventas" id="menu_ventass" action="moviles_ventas_action" parent="menu_inicio" sequence="15"/>
+
+        <record id="moviles_ventas_view_tree" model="ir.ui.view">
+            <field name="name">Lista de moviles</field>
+            <field name="model">moviles.ventas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="idVen" />
+                    <field name="idCli" />
+                    <field name="fecVenta" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="moviles_ventas_view_form" model="ir.ui.view">
+            <field name="name">Prueba formulario</field>
+            <field name="model">moviles.ventas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="idVen" />
+                        <field name="idCli" />
+                        <field name="fecVenta" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="moviles_ventas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda</field>
+            <field name="model">moviles.ventas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="idVen" />
+                    <field name="idCli" />
+                    <field name="fecVenta" />
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
